@@ -19,10 +19,8 @@ $di = new FactoryDefault();
  */
 $di['router'] = function () {
 
-    $router = new Router();
-
-    $router->setDefaultModule("api");
-    $router->setDefaultNamespace("Bucksbunny\Api\Controllers");
+    $router = new \Phalcon\Mvc\Router\Annotations(false);
+    include __DIR__ . '/routes.php';
 
     return $router;
 };

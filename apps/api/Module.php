@@ -16,16 +16,6 @@ class Module implements ModuleDefinitionInterface
      */
     public function registerAutoloaders()
     {
-
-        $loader = new Loader();
-
-        $loader->registerNamespaces(array(
-            'Bucksbunny\Api\Controllers' => __DIR__ . '/controllers/',
-            'Bucksbunny\Api\Models' => __DIR__ . '/models/',
-            'Bucksbunny\Api\Services' => __DIR__ . '/services/',
-        ));
-
-        $loader->register();
     }
 
     /**
@@ -41,6 +31,7 @@ class Module implements ModuleDefinitionInterface
          */
         $config = include __DIR__ . "/config/config.php";
 
+        $di['config'] = $config;
 
         /**
          * Database connection is created based in the parameters defined in the configuration file

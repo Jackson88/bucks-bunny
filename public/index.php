@@ -12,6 +12,11 @@ try {
     require __DIR__ . '/../config/services.php';
 
     /**
+     * Include loaders
+     */
+    require __DIR__ . '/../config/loaders.php';
+
+    /**
      * Handle the request
      */
     $application = new Application($di);

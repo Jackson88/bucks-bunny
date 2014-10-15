@@ -2,17 +2,15 @@
 
 namespace Bucksbunny\Api\Controllers;
 
-class IndexController extends ControllerBase
+class IndexController extends RestController
 {
 
-    public function indexAction()
-    {
-        return ['adsasd'];
-    }
-
+    /**
+     * @Get("/get")
+     */
     public function getAction()
     {
-
+        return 12223;
     }
 
 }
